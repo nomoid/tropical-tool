@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+<head>
+    <!-- Template from: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <script src="convert.js"></script>
+
+    <title>Tropical Geometry Newton Polygon Tool</title>
+</head>
+
+<body class="d-flex flex-column h-100">
+    <main class="flex-shrink-0" role="main">
+        <div class="container">
+            <h1 class="mt-5">Tropical Geometry Newton Polygon Tool</h1>
+            <p class="lead">Provide an Ipe file containing a Netwon polygon with subdivisions to generate corresponding polymake code.</p>
+            <div class="mb-3">
+                <label class="form-label" for="inputFile">Select .ipe file</label>
+                <input class="form-control" type="file" id="inputFile" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="pathLength">Path Length (default: 16)</label>
+                <input class="form-control" type="number" id="pathLength" value="16" />
+            </div>
+            <p>
+                Select operations
+            </p>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="doVisualize" value="" checked />
+                <label class="form-label" for="doVisualize">Visualize subdivision</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="doCheckRegular" value="" checked />
+                <label class="form-label" for="doCheckRegular">Check for regularity and print weights if regular</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="doCheckUnimodular" value="" checked />
+                <label class="form-label" for="doCheckUnimodular">Check for unimodularity</label>
+            </div>
+            <div class="mb-3">
+                <button type="button" class="btn btn-primary" onclick="convert();">Convert</button>
+            </div>
+            <div class="container border rounded bg-light" id="outputBox" hidden>
+                <pre><code id="output">Hello, world!</code></pre>
+            </div>
+            <!-- Option 1: Bootstrap Bundle with Popper -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+                crossorigin="anonymous"></script>
+        </div>
+    </main>
+</body>
+
+</html>

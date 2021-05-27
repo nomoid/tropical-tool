@@ -1,0 +1,15 @@
+{
+  "name": "tropical-geometry-converter",
+  "version": "0.0.1",
+  "description": "Tropical geometry converter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Markus Feng",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "typescript": "^4.3.2"
+  }
+}
